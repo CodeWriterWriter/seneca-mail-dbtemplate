@@ -1,0 +1,29 @@
+{
+  "name": "seneca-mail-dbtemplate",
+  "version": "0.0.1",
+  "description": "Seneca email db template plugin",
+  "main": "dbtemplate.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mirceaalexandru/seneca-mail-dbtemplate.git"
+  },
+  "keywords": [
+    "seneca",
+    "mail",
+    "email",
+    "plugin"
+  ],
+  "author": "Mircea Alexandru",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "~1.0.0"
+  },
+  "peerDependencies": {
+    "seneca": "*"
+  },
+  "files": [
+    "README.md",
+    "LICENSE.txt",
+    "dbtemplate.js"
+  ]
+}
