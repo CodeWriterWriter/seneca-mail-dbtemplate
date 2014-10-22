@@ -34,5 +34,43 @@ Body and subject are considered EJS templates and will be rendered using ejs.
 
 This module can be an example about re-writing the seneca action generateBody action if default provided functionality is not enough.
 
+Please make sure to load this module AFTER loading seneca-mail plugin.
+
+#### Example of using the seneca-mail and seneca-mail-dbtemplate plugins
+
+```JavaScript
+var seneca = require('seneca')()
+
+seneca.use('mail',{
+  folder: './email-templates',
+  mail: {
+    from: 'help@example.com'
+  },
+  config:{
+    service: "Gmail",
+    auth: {
+      user: "help@example.com",
+      pass: "PASSWORD"
+    }
+  }
+})
+
+seneca.use('seneca-mail-dbtemplate')
+
+seneca.ready(function(err){
+  console.log('ola')
+  if( err ) return console.log(err);
+
+  seneca.act({
+    role:'mail',
+    cmd:'send',
+    code:'welcome',
+    to:'customer1@example.com',
+    subject:'Welcome!'
+  })
+})
+```
+
+
 If you're using this module, feel free to contact me on twitter if you
 have any questions! :) [@Alexandru_M](https://twitter.com/Alexandru_M)
