@@ -42,7 +42,6 @@ Please make sure to load this module AFTER loading seneca-mail plugin.
 var seneca = require('seneca')()
 
 seneca.use('mail',{
-  folder: './email-templates',
   mail: {
     from: 'help@example.com'
   },
