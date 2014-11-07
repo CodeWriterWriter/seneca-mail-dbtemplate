@@ -46,7 +46,7 @@ module.exports = function (options) {
     })
   }
 
-  seneca.add({role: 'mail', cmd: 'generateBody'}, generateBody)
+  seneca.add({role: 'mail', cmd: 'generate'}, generateBody)
 
   return {
     name: plugin

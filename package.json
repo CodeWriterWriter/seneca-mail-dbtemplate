@@ -1,6 +1,6 @@
 {
   "name": "seneca-mail-dbtemplate",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Seneca email db template plugin",
   "main": "dbtemplate.js",
   "repository": {
